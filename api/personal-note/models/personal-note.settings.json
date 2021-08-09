@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "personal_notes",
+  "info": {
+    "name": "personal-note",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "note": {
+      "type": "richtext"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

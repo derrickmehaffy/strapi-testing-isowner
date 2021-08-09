@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_posts",
+  "info": {
+    "name": "blog-post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "comments": {
+      "via": "blog_post",
+      "collection": "comment"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

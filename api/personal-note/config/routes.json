@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/personal-notes",
+      "handler": "personal-note.find",
+      "config": {
+        "policies": ["global::isOwnerNotes"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/personal-notes/count",
+      "handler": "personal-note.count",
+      "config": {
+        "policies": ["global::isOwnerNotes"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/personal-notes/:id",
+      "handler": "personal-note.findOne",
+      "config": {
+        "policies": ["global::isOwnerNotes"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/personal-notes",
+      "handler": "personal-note.create",
+      "config": {
+        "policies": ["global::isOwnerNotes"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/personal-notes/:id",
+      "handler": "personal-note.update",
+      "config": {
+        "policies": ["global::isOwnerNotes"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/personal-notes/:id",
+      "handler": "personal-note.delete",
+      "config": {
+        "policies": ["global::isOwnerNotes"]
+      }
+    }
+  ]
+}
